@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Records</title>
+    <link rel="stylesheet" href="styles.css">  <!-- link to css file for styling -->
+</head>
+<body>
+    <header>
+        <h1>Customer Payments</h1>
+    </header>
+    <div>
+        <label for="start-date">Start Date:</label> <!-- Date filter to choose a date range for easier search -->
+        <input type="date" id="start-date"> <!-- input field for start date -->
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date">   <!-- input field for end date -->
+        <button id="filter-button">Filter</button> <!-- filter button to apply filter -->
+    </div>
+    <table id="payments-table">
+        <thead>
+            <tr>
+                <th>Payment ID</th> <!--PaymentID column -->
+                <th>Payment Number</th> <!--Payment number column -->
+                <th>Customer ID</th> <!--customer ID column -->
+                <th>Customer</th> <!--customer column -->
+                <th>Amount</th> <!--amount column -->
+                <th id="payment-date-header">Payment Date</th>  <!-- payment date column -->
+                <th>Action</th> <!-- column for action button. View buttons. -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be inserted here -->
+        </tbody>
+    </table>
+    <div id="payment-modal" class="modal">   <!-- modal for displaying payment details -->
+        <div class="modal-content">
+            <span class="close-button">&times;</span>    <!-- button to close the modal -->
+            <div id="payment-details"></div>   <!-- enclosure for payment details -->
+        </div>
+    </div>
+    <script src="scripts.js"></script>   <!-- link to js file -->
+</body>
+</html>
